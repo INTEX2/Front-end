@@ -6,4 +6,34 @@ $warning: #8C5C03;
 $danger: #9E2821;
 $light: #f8f9fa;
 
+$top-bg : #00A878;
+$left-bg : #FFD166;
+$center-bg: #CFDBD5;
+$right-bg : #CFDBD5;
+$bottom-bg : #CFDBD5;
+
+.top-bg{
+  background-color: $top-bg ;
+
+}
+
+.left-bg{
+  background-color: $left-bg ;
+}
+
+.middle-bg{
+  background-color: $center-bg ;
+}
+.right-bg{
+  background-color: $right-bg ;
+}
+
+.bottom-bg{
+  background-color: $bottom-bg ;
+}
+
+
+@import "~bootstrap/scss/bootstrap";
+   
+
 @import '~bootstrap/scss/bootstrap';

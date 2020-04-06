@@ -1,22 +1,38 @@
 import React from 'react';
 import * as bs from 'react-bootstrap'
+import {Link, } from 'react-router-dom'
+import Img1 from './media/your-logo-2.png'
+import Img2 from './media/your-logo-3.png'
+import Img3 from './media/your-logo-4.png'
 
 function About() {
     return (
-        <bs.Container fluid className="p-4">
-            <bs.Row noGutters className="rounded-top" style={{backgroundColor: 'white'}}>
-                <bs.Col>
-                    <h1>About</h1>
-                </bs.Col>
-            </bs.Row>
-            <bs.Row noGutters className="rounded-bottom" style={{backgroundColor: 'white'}}>
-                <bs.Col>
-                <p>
-                    Lorem ipsum dolor sit amet, vis ex assum dicta comprehensam, unum eius incorrupte ei nec. Qui ei lorem fierent sapientem. Qui quis ferri nusquam eu. Eu eos labore invenire maiestatis, eum alii probatus an, at est vivendo reprimique reprehendunt. Qui an aeque prodesset. Est movet suscipit at, modus appareat facilisis te eum, quo invidunt electram expetenda te.
-                </p>
-                </bs.Col>
-            </bs.Row>
-        </bs.Container>
+        <bs.Container>
+<bs.Carousel>
+  <bs.Carousel.Item>
+    <img
+      className=""
+      src={Img1}
+      alt="First slide"
+    />
+  </bs.Carousel.Item>
+  <bs.Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={Img2}
+      alt="Sec slide"
+    />
+  </bs.Carousel.Item>
+  <bs.Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={Img3}
+      alt="Third slide"
+    />
+  </bs.Carousel.Item>
+</bs.Carousel>
+<Link to={"/search/"}className="btn btn-light">How can I improve my campaign?</Link>
+</bs.Container>
     )  
 }
 

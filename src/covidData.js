@@ -5,7 +5,7 @@ import {Link,} from 'react-router-dom'
 // import { useRouteMatch } from 'react-router-dom'
 // import AppContext from './context'
 
-function Middle() {
+function Covid() {
     return (
         <bs.Container fluid className="p-4">
             <bs.Row className="p-0">
@@ -16,4 +16,4 @@ function Middle() {
     )
 }
 
-export default Middle;
+export default Covid;
