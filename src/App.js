@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react"
 import * as bs from 'react-bootstrap'
 import Top from './top'
 import Left from './left'
@@ -12,11 +12,13 @@ import Search from './search'
 import Predictor from './predictor'
 import SearchDetails from './searchDetails'
 import Tips from './tips'
+import LogIn from './login'
 import './App.scss'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 
 function App() {
+
   return (
     <div className="App">
       <Router>
@@ -38,6 +40,7 @@ function App() {
                 <Route path="/searchDetails" component={SearchDetails}/>
                 <Route path="/predictor" component={Predictor}/>
                 <Route path="/covidData" component={Covid}/>
+                <Route path="/login" component={LogIn}/>
                 <Route path="/tips" component={Tips}/>
                 <Route path="/" component={Middle}/>
               </Switch> 
