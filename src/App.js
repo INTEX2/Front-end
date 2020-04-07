@@ -13,6 +13,7 @@ import Predictor from './predictor'
 import SearchDetails from './searchDetails'
 import Tips from './tips'
 import LogIn from './login'
+import Calculaitons from './calculations'
 import './App.scss'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/covidData" component={Covid}/>
                 <Route path="/login" component={LogIn}/>
                 <Route path="/tips" component={Tips}/>
+                <Route path="/calculations" component={Calculaitons}/>
                 <Route path="/" component={Middle}/>
               </Switch> 
             </bs.Col>
