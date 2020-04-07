@@ -32,6 +32,7 @@ function Top() {
                         <Link to="/help" className="nav-link" style={{color: "white"}}>Help</Link>
                         <Link to="/covidData" className="nav-link" style={{color: "white"}}>Covid</Link>
                         <Link to="/login" className="nav-link" style={{color: "white"}}>Log In</Link>
+                        <Link to="/calculations" className="nav-link" style={{color: "white"}}>Calculus 2</Link>
                     </bs.Nav>
                     <bs.Form inline>
                     <bs.FormControl type="text" placeholder="Search" className="mr-sm-2" />
