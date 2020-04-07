@@ -12,6 +12,7 @@ export default class AppProvider extends React.Component {
             LogOut: this.LogOut,
             getUserName: this.getUserName,
             setUserName: this.setUserName,
+            updateSearch: this.updateSearch,
 
         }
         this.state = {
@@ -19,9 +20,24 @@ export default class AppProvider extends React.Component {
             userName: null,
             isLogInError: false,
             isAdmin: false,
+            campaign: {},
+            search: 'search',
         }
     } 
 
+    updateSearch(event){
+        this.setState({search: event.target.value.substr(0, 20)});
+    }
+
+    render(){
+        let filteredSearch = this.props.campaign.filter(
+            (campaign)=> {
+                return campaign.title.toLowerCase().indexOf(
+                    this.state.search) !== -1;
+            }
+        )
+    }
+    
     getUserName() {
         return(this.userName)
     }
