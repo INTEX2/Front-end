@@ -12,8 +12,15 @@ $center-bg: #CFDBD5;
 $right-bg : #CFDBD5;
 $bottom-bg : #CFDBD5;
 
+code {
+    text-align: center;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
 .top-bg{
   background-color: $top-bg ;
+  box-shadow: 10px 10px;
 
 }
 
@@ -23,9 +30,11 @@ $bottom-bg : #CFDBD5;
 
 .middle-bg{
   background-color: $center-bg ;
+  box-shadow: 10px 10px;
 }
 .right-bg{
   background-color: $right-bg ;
+
 }
 
 .bottom-bg{

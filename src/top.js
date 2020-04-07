@@ -28,9 +28,14 @@ function Top() {
                     <bs.Nav className="mr-auto">
                         <Link to="/" className="nav-link" style={{color: "white"}}>Home</Link>
                         <Link to="/about" className="nav-link" style={{color: "white"}}>About</Link>
+                        <Link to="/predictor" className="nav-link" style={{color: "white"}}>Score Campaign</Link>
                         <Link to="/help" className="nav-link" style={{color: "white"}}>Help</Link>
                         <Link to="/covidData" className="nav-link" style={{color: "white"}}>Covid</Link>
                     </bs.Nav>
+                    <bs.Form inline>
+                    <bs.FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                    <bs.Button variant="outline-success" class="fas fa-search">search</bs.Button>
+                    </bs.Form>
                     <bs.Nav>
                         <bs.NavDropdown title="Welcome, Dakota" alignRight style={{color: "white"}}>
                             <bs.NavDropdown.Item>My Account</bs.NavDropdown.Item>
