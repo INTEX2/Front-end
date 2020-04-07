@@ -1,8 +1,10 @@
 import React from 'react'
 import * as bs from 'react-bootstrap'
+import AppContext from './context'
 import {Link, } from 'react-router-dom'
 
-function Search() {
+function Search(){
+    const context = React.useContext(AppContext)
     return (
         <bs.Container fluid className="p-4">
             <bs.Row noGutters className="rounded-top" style={{backgroundColor: 'white'}}>
@@ -12,7 +14,8 @@ function Search() {
             </bs.Row>
             <bs.Row noGutters className="rounded-bottom" style={{backgroundColor: 'white'}}>
                 <bs.Col>                
-                <bs.InputGroup className="mb-3">
+                <input className="mb-3" value="search"
+                    onChange={context.updateSearch.bind(context)}>
                     <bs.FormControl
                     placeholder="Enter Campaign"
                     aria-label="Campaign"
@@ -21,10 +24,17 @@ function Search() {
                     <bs.InputGroup.Append>
                     <Link to={"/searchDetails/"}className="btn btn-light">Campaign Details</Link>
                     </bs.InputGroup.Append>
-                </bs.InputGroup>
-                <p>
-                    Lorem ipsum dolor sit amet, vis ex assum dicta comprehensam, unum eius incorrupte ei nec. Qui ei lorem fierent sapientem. Qui quis ferri nusquam eu. Eu eos labore invenire maiestatis, eum alii probatus an, at est vivendo reprimique reprehendunt. Qui an aeque prodesset. Est movet suscipit at, modus appareat facilisis te eum, quo invidunt electram expetenda te.
-                </p>
+                </input>
+                <div>
+                    <ul>
+                    {context.campaign.map((campaign)=>{
+                        return (
+                        <Link key={campaign.id} to={`/campaign/${campaign.title}`} className="nav-link"></Link>
+                            )}
+                        )
+                     }
+                    </ul>
+                </div>
                 
                 </bs.Col>
             </bs.Row>

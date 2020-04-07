@@ -12,7 +12,11 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+<<<<<<< HEAD
+    "convert-csv-to-json": "0.0.15",
+=======
     "formik": "^2.1.4",
+>>>>>>> 826ba1d2bbfc806e948f8ba1bda5699b74a3f839
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -42,5 +46,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7"
   }
 }
+
+

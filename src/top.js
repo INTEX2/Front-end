@@ -36,7 +36,7 @@ function Top() {
                     </bs.Nav>
                     <bs.Form inline>
                     <bs.FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <bs.Button variant="outline-success" class="fas fa-search">search</bs.Button>
+                    <bs.Button variant="outline-success" className="fa fa-search search-icon"></bs.Button>
                     </bs.Form>
                     <bs.Nav>
                         <bs.NavDropdown title="Welcome, Dakota" alignRight style={{color: "white"}}>
