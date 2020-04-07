@@ -29,7 +29,9 @@ function Top() {
                         <Link to="/" className="nav-link" style={{color: "white"}}>Home</Link>
                         <Link to="/about" className="nav-link" style={{color: "white"}}>About</Link>
                         <Link to="/help" className="nav-link" style={{color: "white"}}>Help</Link>
+                        <Link to="/login" className="nav-link" style={{color: "white"}}>Log In</Link>
                     </bs.Nav>
+                    
                     <bs.Nav>
                         <bs.NavDropdown title="Welcome, Dakota" alignRight style={{color: "white"}}>
                             <bs.NavDropdown.Item>My Account</bs.NavDropdown.Item>
