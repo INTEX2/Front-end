@@ -14,6 +14,7 @@ import SearchDetails from './searchDetails'
 import Tips from './tips'
 import LogIn from './login'
 import Calculaitons from './calculations'
+import Donations from './calculation-donation'
 import './App.scss'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
@@ -44,6 +45,7 @@ function App() {
                 <Route path="/login" component={LogIn}/>
                 <Route path="/tips" component={Tips}/>
                 <Route path="/calculations" component={Calculaitons}/>
+                <Route path="/donation-calculation" component={Donations}/>
                 <Route path="/" component={Middle}/>
               </Switch> 
             </bs.Col>
