@@ -9,11 +9,7 @@ function CampaignDetails(props){
     let {id} = useParams()
     const item = context.campaign.find(prod => {
         return(prod.id.toString() === id)})
-    console.log(item)
-    // if(!camp){
-    //     return(<h2>Campaign does not exist</h2>)
-    // }
-    // else{
+
     return (
         <bs.Container >
             <div>
