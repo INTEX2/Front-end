@@ -16,6 +16,8 @@ import Tips from './tips'
 import LogIn from './login'
 import Calculaitons from './calculations'
 import Donations from './calculation-donation'
+import Analysts from './analysts'
+import Quality from './quality'
 import './App.scss'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
@@ -26,7 +28,7 @@ function App() {
       <Router>
         <bs.Container fluid="true" className='p-0 min-vh-100 d-flex flex-column' style={{backgroundColor: "gray"}}>
           <bs.Row noGutters>
-            <bs.Col className="shadow px-3 py-2 pb-4 top-bg" class="shadow mb-4" fluid="true">
+            <bs.Col className="shadow px-3 py-2 pb-4 top-bg" fluid="true">
               <Top/>
             </bs.Col>
           </bs.Row>
@@ -47,8 +49,9 @@ function App() {
                 <Route path="/tips" component={Tips}/>
                 <Route path="/calculations" component={Calculaitons}/>
                 <Route path="/donation-calculation" component={Donations}/>
-                <Route path="/gofundme-analysts" component={Donations}/>
+                <Route path="/gofundme-analysts" component={Analysts}/>
                 <Route path="/testimonials" component={Donations}/>
+                <Route path="/quality" component={Quality}/>
                 <Route path="/" component={Middle}/>
               </Switch> 
             </bs.Col>
