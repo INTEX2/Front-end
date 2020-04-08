@@ -11,6 +11,7 @@ export default function Left() {
     <bs.Container fluid className="p-4">
       <bs.Row className="p-0">
       <h1>Hacks for more money</h1>
+      <Link to="/Search" className="nav-link" style={{color: "dark"}}>All Campaigns</Link>
       <Link to="/Tips" className="nav-link" style={{color: "dark"}}>Tips for a succesful Campaign</Link>
         <li>Get married</li>
         <li>Take out life insurance </li>
