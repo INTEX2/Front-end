@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import * as bs from 'react-bootstrap'
 import {Link, useParams} from 'react-router-dom'
 import AppContext from "./context";
-import CampaignRow from "./campaign-row"
+import CampaignRowCreator from "./campaign-row-creator"
 
 
 function AllCampaigns() {
@@ -21,12 +21,12 @@ function AllCampaigns() {
                       <bs.Col md="4">Title</bs.Col>
                       <bs.Col md="2">Goal</bs.Col>
                       <bs.Col md="2">Amount Raised</bs.Col>
-                      <bs.Col md="2">Quality</bs.Col>
+                      <bs.Col md="2">Donators</bs.Col>
                       <bs.Col md="2">View Details</bs.Col>
                   </bs.Row>
                   {Object.values(context.campaign).map(n =>{
                       return (
-                      <CampaignRow key={n.id} campaign={n.id}/>
+                      <CampaignRowCreator key={n.id} campaign={n.id}/>
                       )
                   })}
               </bs.Col>
