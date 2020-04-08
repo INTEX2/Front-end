@@ -22,10 +22,9 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 function App() {
 
   return (
-    <div className="App">
       <Router>
         <bs.Container fluid="true" className='p-0 min-vh-100 d-flex flex-column' style={{backgroundColor: "gray"}}>
-          <bs.Row noGutters className="">
+          <bs.Row noGutters>
             <bs.Col className="shadow px-3 py-2 pb-4 top-bg" class="shadow mb-4" fluid="true">
               <Top/>
             </bs.Col>
@@ -37,7 +36,7 @@ function App() {
             <bs.Col md="8"  className= " middle-bg" >
               <Switch>
                 <Route path="/about" component={About}/>
-                <Route path="/help" component={Help}/>
+                <Route path="/resources" component={Help}/>
                 <Route path="/search" component={Search}/>
                 <Route path="/searchDetails" component={SearchDetails}/>
                 <Route path="/predictor" component={Predictor}/>
@@ -55,14 +54,13 @@ function App() {
               <Right/>
             </bs.Col>
           </bs.Row>
-          <bs.Row noGutters className="flex-grow-0 flex-shrink-0 pt-1">
+          <bs.Row noGutters className="flex-grow-0 flex-shrink-0">
             <bs.Col className="px-3 py-2 bottom-bg">
               <Bottom/>
             </bs.Col>
           </bs.Row>
         </bs.Container>
       </Router>
-    </div>
   )
 }
 

@@ -26,8 +26,7 @@ function Top() {
                     <bs.Nav className="mr-auto">
                         <Link to="/" className="nav-link" style={{color: "white"}}>Home</Link>
                         <Link to="/about" className="nav-link" style={{color: "white"}}>About</Link>
-                        <Link to="/help" className="nav-link" style={{color: "white"}}>Help</Link>
-                        <Link to="/covid-data" className="nav-link" style={{color: "white"}}>Covid</Link>
+                        <Link to="/resources" className="nav-link" style={{color: "white"}}>Resources</Link>
                         <Link to="/login" className="nav-link" style={{color: "white"}}>Log In</Link>
                     </bs.Nav>
                     <bs.Form inline>
