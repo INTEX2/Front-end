@@ -9,7 +9,7 @@ import Logo from './media/fund.png'
 function Top() {
     return (
         <div>
-            <Navbar className="top-bg" expand="lg">
+            <Navbar expand="lg">
                 <Link to="/">
                     <Navbar.Brand>
                     <img
@@ -17,9 +17,7 @@ function Top() {
                         src={Logo}
                         width="100"
                         height="50"
-                        // className="d-inline-block align-top"
                     />{' '}
-                        Intex 2
                     </Navbar.Brand>
                     <i class="fas fa-sun"></i>
                 </Link>
@@ -28,11 +26,9 @@ function Top() {
                     <bs.Nav className="mr-auto">
                         <Link to="/" className="nav-link" style={{color: "white"}}>Home</Link>
                         <Link to="/about" className="nav-link" style={{color: "white"}}>About</Link>
-                        <Link to="/predictor" className="nav-link" style={{color: "white"}}>Score Campaign</Link>
                         <Link to="/help" className="nav-link" style={{color: "white"}}>Help</Link>
-                        <Link to="/covidData" className="nav-link" style={{color: "white"}}>Covid</Link>
+                        <Link to="/covid-data" className="nav-link" style={{color: "white"}}>Covid</Link>
                         <Link to="/login" className="nav-link" style={{color: "white"}}>Log In</Link>
-                        <Link to="/calculations" className="nav-link" style={{color: "white"}}>Calculus 2</Link>
                     </bs.Nav>
                     <bs.Form inline>
                     <bs.FormControl type="text" placeholder="Search" className="mr-sm-2" />

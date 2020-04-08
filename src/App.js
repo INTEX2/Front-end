@@ -24,14 +24,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <bs.Container fluid className="p-0 min-vh-100 d-flex flex-column " style={{backgroundColor: "gray"}}>
+        <bs.Container fluid="true" className='p-0 min-vh-100 d-flex flex-column' style={{backgroundColor: "gray"}}>
           <bs.Row noGutters className="">
-            <bs.Col className="shadow px-3 py-2 mb-4 top-bg" class="shadow mb-4">
+            <bs.Col className="shadow px-3 py-2 pb-4 top-bg" class="shadow mb-4" fluid="true">
               <Top/>
             </bs.Col>
           </bs.Row>
           <bs.Row noGutters className="flex-grow-1">
-            <bs.Col md="2" className=" left-bg">
+            <bs.Col md="2" className=" left-bg" fluid="true">
               <Left/>
             </bs.Col>
             <bs.Col md="8"  className= " middle-bg" >
@@ -41,11 +41,13 @@ function App() {
                 <Route path="/search" component={Search}/>
                 <Route path="/searchDetails" component={SearchDetails}/>
                 <Route path="/predictor" component={Predictor}/>
-                <Route path="/covidData" component={Covid}/>
+                <Route path="/covid-data" component={Covid}/>
                 <Route path="/login" component={LogIn}/>
                 <Route path="/tips" component={Tips}/>
                 <Route path="/calculations" component={Calculaitons}/>
                 <Route path="/donation-calculation" component={Donations}/>
+                <Route path="/gofundme-analysts" component={Donations}/>
+                <Route path="/testimonials" component={Donations}/>
                 <Route path="/" component={Middle}/>
               </Switch> 
             </bs.Col>

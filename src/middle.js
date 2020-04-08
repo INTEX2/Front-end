@@ -11,7 +11,7 @@ function Middle() {
 <bs.Carousel>
   <bs.Carousel.Item>
     <img
-      className=""
+      className="d-block w-100"
       src={Img1}
       alt="First slide"
     />
