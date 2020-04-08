@@ -4,6 +4,7 @@ import * as bs from 'react-bootstrap'
 import AppContext from './context'
 import CampaignRow from './campaign-row'
 
+
 function Quality() {
     let context = useContext(AppContext)  
     console.log(context.campaign)  
