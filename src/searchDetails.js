@@ -10,6 +10,7 @@ function SearchDetails() {
   let camp = CampArray
     return (
         <bs.Container fluid className="p-4">
+          
 <bs.Table striped bordered hover>
   <thead>
     <tr>

@@ -24,13 +24,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <bs.Container fluid className="p-0 min-vh-100 d-flex flex-column " style={{backgroundColor: "gray"}}>
-          <bs.Row noGutters className="">
-            <bs.Col className="shadow px-3 py-2 mb-4 top-bg" class="shadow mb-4">
+        <bs.Container fluid  className="p-0 min-vh-100 d-flex flex-column " style={{backgroundColor: "gray"}}>
+          <bs.Row className="">
+            <bs.Col className="shadow mb-2 top-bg" class="shadow mb-4">
               <Top/>
             </bs.Col>
           </bs.Row>
-          <bs.Row noGutters className="flex-grow-1">
+          <bs.Row  className="flex-grow-1">
             <bs.Col md="2" className=" left-bg">
               <Left/>
             </bs.Col>
@@ -53,7 +53,7 @@ function App() {
               <Right/>
             </bs.Col>
           </bs.Row>
-          <bs.Row noGutters className="flex-grow-0 flex-shrink-0 pt-1">
+          <bs.Row  className="flex-grow-0 flex-shrink-0 pt-1">
             <bs.Col className="px-3 py-2 bottom-bg">
               <Bottom/>
             </bs.Col>
