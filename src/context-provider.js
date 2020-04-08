@@ -15,29 +15,22 @@ export default class AppProvider extends React.Component {
             updateSearch: this.updateSearch,
 
         }
+        this.cancel = '';
         this.state = {
             LoggedIn: false,
             userName: null,
             isLogInError: false,
             isAdmin: false,
             campaign: {},
-            search: 'search',
+            search: ''
         }
     } 
-
-    updateSearch(event){
-        this.setState({search: event.target.value.substr(0, 20)});
-    }
-
-    render(){
-        let filteredSearch = this.props.campaign.filter(
-            (campaign)=> {
-                return campaign.title.toLowerCase().indexOf(
-                    this.state.search) !== -1;
-            }
-        )
-    }
     
+    updateSearch(event){
+        this.setState({search: event.target.value.substr(0,20)})
+    }
+
+   
     getUserName() {
         return(this.userName)
     }

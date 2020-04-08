@@ -2,9 +2,15 @@ import React from 'react'
 import * as bs from 'react-bootstrap'
 import AppContext from './context'
 import {Link, } from 'react-router-dom'
+import CampaignRow from "./campaign-row"
 
-function Search(){
+function Search(props){
     const context = React.useContext(AppContext)
+    let fileteredCampaign = context.state.campaign.filter(
+        (campaign)=> {
+            return campaign.title.indexOf(context.state.search) !== -1;
+        })
+   // const item = context.campaign.find(p => p.id === parseInt(props.campaign));
     return (
         <bs.Container fluid className="p-4">
             <bs.Row noGutters className="rounded-top" style={{backgroundColor: 'white'}}>
@@ -27,12 +33,11 @@ function Search(){
                 </input>
                 <div>
                     <ul>
-                    {context.campaign.map((campaign)=>{
-                        return (
-                        <Link key={campaign.campaign_id} to={`/campaign/${campaign.title}`} className="nav-link"></Link>
-                            )}
-                        )
-                     }
+                    {fileteredCampaign.map((campaign)=>{
+                        return <CampaignRow campaign={campaign}
+                        key={campaign.campaign_id}
+                        ></CampaignRow>
+                    })}
                     </ul>
                 </div>
                 

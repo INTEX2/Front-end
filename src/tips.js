@@ -14,12 +14,96 @@ function Tips() {
                     Our team has run powerful data analytics on thousands of GoFundMe campaigns.
                     Our research has helped us discover metrics that define successful 
                 </p>
+                <bs.Accordion>
+                    <bs.Card>
+                        <bs.Card.Header>
+                        <bs.Accordion.Toggle as={bs.Button} variant="link" eventKey="0">
+                            English Speaking Countries
+                        </bs.Accordion.Toggle>
+                        </bs.Card.Header>
+                        <bs.Accordion.Collapse eventKey="0">
+                        <bs.Card.Body>
+                            <h5>Key words</h5>
+                            <ul>
+                                <li>Coronavirus</li> 
+                                <li>Covid-19</li>
+                                <li>Conquering</li>
+                                <li> Relief</li>
+                                <li>Support</li>
+                                <li>Help</li>
+                                <li>Relief</li>
+                                <li>Fund</li>
+                                <li>Survivor</li>
+                                <li>Save</li>
+                                <li>Battle</li>
+                                <li>HelpingHands</li>
+                            </ul>
+                            <h5>Successful Campaigns</h5>
+                            <ul>
+                            <li><a href="https://www.gofundme.com/f/xpcwgy-conquering-covid19">Conquering Covid19</a></li>
+                            <li><a href="https://www.gofundme.com/f/for-artists">For Artists</a></li>
+                            <li><a href="https://www.gofundme.com/f/helpinghands-for-covid19">HelpingHands for Covid19</a></li>
+                            </ul>
+                        </bs.Card.Body>
+                        </bs.Accordion.Collapse>
+                    </bs.Card>
+                    <bs.Card>
+                        <bs.Card.Header>
+                        <bs.Accordion.Toggle as={bs.Button} variant="link" eventKey="1">
+                            Italian speaking countries 
+                        </bs.Accordion.Toggle>
+                        </bs.Card.Header>
+                        <bs.Accordion.Collapse eventKey="1">
+                        <bs.Card.Body>
+                            <h5>Key words</h5>
+                            <ul>
+                                <li>Covid-19</li> 
+                                <li>sosteniamo</li>
+                                <li>Supporto</li>
+                                <li>Aiuto</li>
+                                <li>Diamo</li>
+                                <li>Emergenza</li>
+                            </ul>
+                            <h5>Successful Campaigns</h5>
+                            <ul>
+                            <li><a href="https://www.gofundme.com/f/raccolta-fondi-per-il-cotugno-di-napolicovid19">Raccolta fondi per il cotugno di napolicovid19s</a></li>
+                            <li><a href="https://www.gofundme.com/f/aiutiamo-ospedale-niguarda-covid19">Aiutiamo ospedale niguarda Covid19</a></li>
+                            </ul>
+                        </bs.Card.Body>
+                        </bs.Accordion.Collapse>
+                    </bs.Card>
+                    <bs.Card>
+                        <bs.Card.Header>
+                        <bs.Accordion.Toggle as={bs.Button} variant="link" eventKey="2">
+                            German Speaking Countries
+                        </bs.Accordion.Toggle>
+                        </bs.Card.Header>
+                        <bs.Accordion.Collapse eventKey="2">
+                        <bs.Card.Body>
+                            <h5>Key words</h5>
+                            <ul>
+                                <li>Soforthilfe</li> 
+                                <li>Corona Virus</li>
+                                <li>Unterstützung</li>
+                                <li> Hilfe</li>
+                                <li>Überlebender & Überlebende</li>
+                                <li>erobern</li>
+                            </ul>
+                            <h5>Successful Campaigns</h5>
+                            <ul>
+                            <li><a href="https://www.gofundme.com/f/DCGCoronaVirusSoforthilfeWuhan">DCGCoronaVirusSoforthilfeWuhan</a></li>
+                            </ul>
+                        </bs.Card.Body>
+                        </bs.Accordion.Collapse>
+                    </bs.Card>
+                </bs.Accordion>
+                <br></br>
                 <p>
                     <Link to="./allCampaigns" className="btn btn-primary">See full list of campaigns</Link>
                 </p>
             </bs.Jumbotron>
             <bs.Row>
-            <bs.Col>
+            <bs.Col className="p4">
             <bs.Row>
             <h1>Suggestion on how to write a successful story in the description</h1>
             <bs.Row>
@@ -57,7 +141,7 @@ function Tips() {
             </bs.Row>
             </bs.Row>
             </bs.Col>
-            <bs.Col>
+            <bs.Col md="4" p="2">
             <bs.Row>
             <h1>What else can I do to make my campaign more successful?</h1>
             <ul>

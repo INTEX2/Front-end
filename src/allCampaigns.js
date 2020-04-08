@@ -2,59 +2,37 @@ import React, {useContext} from 'react'
 import * as bs from 'react-bootstrap'
 import {Link, useParams} from 'react-router-dom'
 import AppContext from "./context";
+import CampaignRow from "./campaign-row"
 
 
-function allCampaigns() {
-  const context = useContext(AppContext)
-  const camp = Object.values(context.campaign);
-  //console.log(camp)
-    return (
-        <bs.Container fluid className="p-4">
-          
-<bs.Table striped bordered hover>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Campaign Name</th>
-      <th>Amount Raised</th>
-      <th># of Donors</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  
-    {camp.map(([cid, value]) =>{ 
-        let myCamp = camp.find(camp=>{
-          return camp.campaign_id = cid})
+function AllCampaigns() {
+      let context = useContext(AppContext) 
+       
+      console.log(context.campaign)  
       return (
-        <div>
-          <tbody>
-          <tr>
-          <td>{camp.campaign_id}</td>
-       <td>{camp.title}</td>
-      <td>{camp.current_amount}</td>
-      <td>{camp.donors}</td>
-      <Link to={"/campaignDetails/" +camp.campaign_id}className="btn btn-secondary" >Details</Link>
+          <bs.Container className='text-left' >
+              <bs.Row>
+                  <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
+                      <h2>GoFundMe Management &amp; Analyst Campaign Ratings</h2>
+                  </bs.Col>
+              </bs.Row>
+              <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
+                  <bs.Row className='mb-3 font-weight-bold'>
+                      <bs.Col md="4">Title</bs.Col>
+                      <bs.Col md="2">Goal</bs.Col>
+                      <bs.Col md="2">Amount Raised</bs.Col>
+                      <bs.Col md="2">Quality</bs.Col>
+                      <bs.Col md="2">View Details</bs.Col>
+                  </bs.Row>
+                  {Object.values(context.campaign).map(n =>{
+                      return (
+                      <CampaignRow key={n.id} campaign={n.id}/>
+                      )
+                  })}
+              </bs.Col>
+              
+          </bs.Container>
+      )
+  }
 
-        </tr>
-        </tbody>
-        </div>
-        )}
-    )
-      }
-    {/* <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td colSpan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr> */}
-</bs.Table>
-        </bs.Container>
-    )  
-}
-
-export default allCampaigns
+export default AllCampaigns

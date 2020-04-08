@@ -3,6 +3,7 @@ import {Row} from 'react-bootstrap'
 import {Col} from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import AppContext from './context'
+import {Link, } from 'react-router-dom'
 
 export default function CartItem(props) {
     let context = useContext(AppContext)
@@ -14,7 +15,7 @@ export default function CartItem(props) {
             <Col md="2">{item.goal}</Col>
             <Col md="2">{item.current_amount}</Col>
             <Col md="2">{item.quality}</Col>
-            <Col md="2"><Button>Details</Button></Col>
+            <Col md="2"><Link to={"/campaignDetails/" +item.id} className="btn btn-secondary">Details</Link></Col>
         </Row>
     )
 }

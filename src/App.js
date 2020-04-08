@@ -10,7 +10,7 @@ import Help from './Help'
 import Covid from './covidData'
 import Search from './search'
 import Predictor from './predictor'
-import allCampaigns from './allCampaigns'
+import AllCampaigns from './allCampaigns'
 import CampaignDetails from './campaignDetails'
 import Tips from './tips'
 import LogIn from './login'
@@ -41,8 +41,8 @@ function App() {
                 <Route path="/about" component={About}/>
                 <Route path="/resources" component={Help}/>
                 <Route path="/search" component={Search}/>
-                <Route path="/allCampaigns" component={allCampaigns}/>
-                <Route path="/campaignDetails" component={CampaignDetails}/>
+                <Route path="/allCampaigns" component={AllCampaigns}/>
+                <Route path="/campaignDetails/:id" component={CampaignDetails}/>
                 <Route path="/predictor" component={Predictor}/>
                 <Route path="/covid-data" component={Covid}/>
                 <Route path="/login" component={LogIn}/>
