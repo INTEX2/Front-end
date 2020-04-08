@@ -6,12 +6,12 @@ import AppContext from './context'
 import axios from 'axios'
 
 
-function Checkout(props) {
+function Donations(props) {
     return (
             <CheckoutController />
     )
 }
-export default Checkout
+export default Donations
 
 
 const CheckoutController = props => {
@@ -55,7 +55,7 @@ const CheckoutController = props => {
                 console.log('entered here')
                 // UNCOMMENT THE CODE BELOW FOR THE API POST CALL
                 try {
-                    resp = await axios.post('http://localhost:8000/api/calc/',{
+                    resp = await axios.post('http://localhost:8000/api/calc-donation/',{
                         "FacebookAuto": values.facebook,
                         "CatId": values.catID,
                         "Currency": values.currency,
@@ -92,14 +92,14 @@ const PaymentForm = props => (
                 </bs.Col>
             </bs.Row>
                 <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
-                <Input title="Will you automatically the campaign to Facebook?:" name="facebook" type="checkbox" disabled={props.form.isSubmitting} />
+                        <Input title="Will you automatically the campaign to Facebook?:" name="facebook" type="checkbox" disabled={props.form.isSubmitting} />
                         <Input title="Category ID:" name="catID" type="number" disabled={props.form.isSubmitting}/>
                         <Input title="Currency Code:" name="currency" type="text" disabled={props.form.isSubmitting}/>
                         <Input title="Donation Goal:" name="goal" type="number" disabled={props.form.isSubmitting}/>
                         <Input title="Do you have a beneficiary?:" name="beneficiary" type="checkbox" disabled={props.form.isSubmitting}/>
                         <Input title="Are you a charity?:" name="charity" type="checkbox" disabled={props.form.isSubmitting}/>
                         <Input title="Is your charity validated by GoFundMe?:" name="charityValidated" type="checkbox" disabled={props.form.isSubmitting}/>
-                        <div hidden={props.prediciton === 0}>Predicted Amount of Donators: {parseInt(props.prediciton)}</div>
+                        <div hidden={props.prediciton === 0}>Predicted Average Donation: {parseInt(props.prediciton)}</div>
                 </bs.Col>
             <bs.Row>
                 <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
