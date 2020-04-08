@@ -15,6 +15,8 @@ import Tips from './tips'
 import LogIn from './login'
 import Calculaitons from './calculations'
 import Donations from './calculation-donation'
+import Analysts from './analysts'
+import Quality from './quality'
 import './App.scss'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
@@ -45,8 +47,9 @@ function App() {
                 <Route path="/tips" component={Tips}/>
                 <Route path="/calculations" component={Calculaitons}/>
                 <Route path="/donation-calculation" component={Donations}/>
-                <Route path="/gofundme-analysts" component={Donations}/>
+                <Route path="/gofundme-analysts" component={Analysts}/>
                 <Route path="/testimonials" component={Donations}/>
+                <Route path="/quality" component={Quality}/>
                 <Route path="/" component={Middle}/>
               </Switch> 
             </bs.Col>

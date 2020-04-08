@@ -19,22 +19,22 @@ function Top() {
                         height="50"
                     />{' '}
                     </Navbar.Brand>
-                    <i class="fas fa-sun"></i>
+                    <i className="fas fa-sun"></i>
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <bs.Nav className="mr-auto">
-                        <Link to="/" className="nav-link" style={{color: "white"}}>Home</Link>
-                        <Link to="/about" className="nav-link" style={{color: "white"}}>About</Link>
-                        <Link to="/resources" className="nav-link" style={{color: "white"}}>Resources</Link>
-                        <Link to="/login" className="nav-link" style={{color: "white"}}>Log In</Link>
+                        <Link to="/" className="nav-link" style={{color: "black"}}>Home</Link>
+                        <Link to="/about" className="nav-link" style={{color: "black"}}>About</Link>
+                        <Link to="/resources" className="nav-link" style={{color: "black"}}>Resources</Link>
+                        <Link to="/login" className="nav-link" style={{color: "black"}}>Log In</Link>
                     </bs.Nav>
                     <bs.Form inline>
                     <bs.FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <bs.Button variant="outline-success" className="fa fa-search search-icon"></bs.Button>
+                    <bs.Button variant="success" className="fa fa-search search-icon"></bs.Button>
                     </bs.Form>
                     <bs.Nav>
-                        <bs.NavDropdown title="Welcome, Dakota" alignRight style={{color: "white"}}>
+                        <bs.NavDropdown title="Welcome, Dakota" alignRight style={{color: "black"}}>
                             <bs.NavDropdown.Item>My Account</bs.NavDropdown.Item>
                             <bs.NavDropdown.Divider />
                             <bs.NavDropdown.Item href="#action/3.4">Log Out</bs.NavDropdown.Item>
