@@ -29,7 +29,7 @@ function Search(){
                     <ul>
                     {context.campaign.map((campaign)=>{
                         return (
-                        <Link key={campaign.id} to={`/campaign/${campaign.title}`} className="nav-link"></Link>
+                        <Link key={campaign.campaign_id} to={`/campaign/${campaign.title}`} className="nav-link"></Link>
                             )}
                         )
                      }

@@ -1,8 +1,7 @@
 // import React, {useContext} from 'react'
 import React from 'react'
 import * as bs from 'react-bootstrap'
-import {Link,} from 'react-router-dom'
-// import { useRouteMatch } from 'react-router-dom'
+import { useRouteMatch, Link } from 'react-router-dom'
 // import AppContext from './context'
 
 function Tips() {
@@ -16,7 +15,7 @@ function Tips() {
                     Our research has helped us discover metrics that define successful 
                 </p>
                 <p>
-                    <Link to="./searchDetails" className="btn btn-primary">See full list of campaigns</Link>
+                    <Link to="./allCampaigns" className="btn btn-primary">See full list of campaigns</Link>
                 </p>
             </bs.Jumbotron>
             <bs.Row>

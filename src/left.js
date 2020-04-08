@@ -10,13 +10,11 @@ export default function Left() {
   return (
     <bs.Container fluid className="p-4">
       <bs.Row className="p-0">
-      <h1>Hacks for more money</h1>
-      <Link to="/Search" className="nav-link" style={{color: "dark"}}>All Campaigns</Link>
-      <Link to="/Tips" className="nav-link" style={{color: "dark"}}>Tips for a succesful Campaign</Link>
-        <li>Get married</li>
-        <li>Take out life insurance </li>
-        <li>Own lots of tigers</li>
-        <li><Link to="/Tips" className="nav-link" style={{color: "dark"}}>Testimonials</Link></li>
+      <Link to="/search"  className='pb-2' style={{color: "dark"}}>All Campaigns</Link><br/>
+      <Link to="/predictor" className='pb-2' style={{color: "dark"}}>Campaign Creators</Link><br/>
+      <Link to="/gofundme-analysts" className='pb-2' style={{color: "dark"}}>GoFundMe Analysts</Link><br/>
+      <Link to="/testimonials" className='pb-2' style={{color: "dark"}}>Testimonials</Link>
+      <Link to="/covid-data" className="pb-2" style={{color: "dark"}}>COVID-19 Visualization</Link>
       </bs.Row>
     </bs.Container>    
     )

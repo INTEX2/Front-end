@@ -1,9 +1,7 @@
 import React, {useContext} from 'react'
 import * as bs from 'react-bootstrap'
-import { useHistory } from "react-router-dom"
 import { Formik, Form, Field} from 'formik'
 import AppContext from './context'  
-import axios from 'axios'
 
 
 function Checkout(props) {
@@ -85,14 +83,16 @@ const CheckoutController = props => {
  */
 const PaymentForm = props => (
     <Form id="form">
-        <bs.Container>
+        <bs.Container className='text-left font-weight-bold'>
             <bs.Row>
                 <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
-                    <h2>Donator Success Predictions:</h2>
+                    <h2>Amount of Donators Predictor</h2>
                 </bs.Col>
             </bs.Row>
                 <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
-                <Input title="Will you automatically the campaign to Facebook?:" name="facebook" type="checkbox" disabled={props.form.isSubmitting} />
+                <p className='font-weight-normal font-italic m-4' >Use this model to predict the amount of donators that will support your campaign. The following inputs are required to create a GoFundMe campaign. By inputting as many as possible, your result will become more accurate.</p>
+                <br/>
+                <Input title="Will you automatically the campaign to Facebook?:"name="facebook" type="checkbox" disabled={props.form.isSubmitting} />
                         <Input title="Category ID:" name="catID" type="number" disabled={props.form.isSubmitting}/>
                         <Input title="Currency Code:" name="currency" type="text" disabled={props.form.isSubmitting}/>
                         <Input title="Donation Goal:" name="goal" type="number" disabled={props.form.isSubmitting}/>

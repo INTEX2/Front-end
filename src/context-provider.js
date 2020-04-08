@@ -84,9 +84,8 @@ export default class AppProvider extends React.Component {
     }
 
     async componentDidMount() {
-        // const resp = await axios.get('https://dakotasarcticapi.herokuapp.com/category')
-        // const resp2 = await axios.get('https://dakotasarcticapi.herokuapp.com/product')
-
-        // this.setState({...this.state, categories: resp.data, products: resp2.data})
+         const resp = await axios.get('localhost:8000/api/campaign/')
+        
+        this.setState({...this.state, campaign: resp.data,})
     }
 }
