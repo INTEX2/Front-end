@@ -9,12 +9,12 @@ export default function CartItem(props) {
     const item = context.campaign.find(p => p.id === parseInt(props.campaign));
 
     return(
-        <Row>
+        <Row className='mb-3'>
             <Col md="4">{item.title}</Col>
             <Col md="2">{item.goal}</Col>
             <Col md="2">{item.current_amount}</Col>
-            <Col md="2">{item.donators}</Col>
-            <Col md="2"><Button>View Details</Button></Col>
+            <Col md="2">{item.quality}</Col>
+            <Col md="2"><Button>Details</Button></Col>
         </Row>
     )
 }

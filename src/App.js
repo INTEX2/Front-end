@@ -27,7 +27,7 @@ function App() {
       <Router>
         <bs.Container fluid="true" className='p-0 min-vh-100 d-flex flex-column' style={{backgroundColor: "gray"}}>
           <bs.Row noGutters>
-            <bs.Col className="shadow px-3 py-2 pb-4 top-bg" class="shadow mb-4" fluid="true">
+            <bs.Col className="shadow px-3 py-2 pb-4 top-bg" fluid="true">
               <Top/>
             </bs.Col>
           </bs.Row>
