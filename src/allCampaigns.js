@@ -6,10 +6,25 @@ import CampaignRowCreator from "./campaign-row-creator"
 
 
 function AllCampaigns() {
-      let context = useContext(AppContext) 
-       
-      console.log(context.campaign)  
-      return (
+    let context = useContext(AppContext) 
+    // console.log('context', context)
+    if (!context.LoggedIn){
+        return(
+            <bs.Container className='text-left' >
+              <bs.Row>
+                  <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
+                      <h2>All Campaigns</h2>
+                  </bs.Col>
+              </bs.Row>
+              <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
+                  <h5>
+                      If the page doesn't load after a couple of seconds you might need to log in... click <Link to="/login" className="">here</Link> to sign in!
+                  </h5>
+              </bs.Col> 
+          </bs.Container>
+        )
+    }
+        return (
           <bs.Container className='text-left' >
               <bs.Row>
                   <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
