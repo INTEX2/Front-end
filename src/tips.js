@@ -6,14 +6,25 @@ import { useRouteMatch, Link } from 'react-router-dom'
 
 function Tips() {
     return (
-        <bs.Container className="p-4" style={{fontFamily: "helvetica", fontWeight:"bold"}}>
-           
-           <bs.Jumbotron>
-                <h1 >Help your campaign stand out from the noise</h1>
+        <bs.Container  style={{fontFamily: "helvetica"}}>
+           <bs.Row>
+                <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
+                    <h2>Tips for Campaign Creators</h2>
+                </bs.Col>
+            </bs.Row>
+            <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
+            <br/>
+            <h1 className='text-center'>Predict Campaign Success</h1>
+            <p>Want to see how your campaign compares with others? Predict your campaign's number of donators or average donation amount.</p>
+            <center><Link to='/calculations/'><bs.Button type="submit" className='w-40 success'  md='6'>Predict Donators</bs.Button></Link><span>        </span>
+            <Link to='/donation-calculation/'><bs.Button type="submit" className='w-40 success'  md='6'>Predict Average Donation</bs.Button></Link></center><br/>
+            <br/><br/>
+            <h1 className='text-center'>Use the Right Words</h1>
                 <p>
-                    Our team has run powerful data analytics on thousands of GoFundMe campaigns.
-                    Our research has helped us discover metrics that define successful 
+                    Help your campaign stand out from the noise with powerful text analytics.
+                    Our research using thousands of GoFundMe campaigns has helped us discover key words and word combinations that lead to successful campaigns. By clicking your language of choice below, you will see what words you should include in your coronavirus campaign.
                 </p>
+                <br/>
                 <bs.Accordion>
                     <bs.Card>
                         <bs.Card.Header>
@@ -86,7 +97,7 @@ function Tips() {
                                 <li>Corona Virus</li>
                                 <li>Unterstützung</li>
                                 <li> Hilfe</li>
-                                <li>Überlebender & Überlebende</li>
+                                <li>Überlebender &amp; Überlebende</li>
                                 <li>erobern</li>
                             </ul>
                             <h5>Successful Campaigns</h5>
@@ -99,16 +110,14 @@ function Tips() {
                 </bs.Accordion>
                 <br></br>
                 <p>
-                    <Link to="./allCampaigns" className="btn btn-primary">See full list of campaigns</Link>
+                    <center><Link to="./allCampaigns" className="btn btn-primary w-50"  block md='12'>View all campaigns</Link></center>
                 </p>
-            </bs.Jumbotron>
-            <bs.Row>
-            <bs.Col className="p4">
-            <bs.Row>
-            <h1>Suggestion on how to write a successful story in the description</h1>
-            <bs.Row>
+
+            
+            <br/><br/>
+            <h1 className='text-center'>Tell a Story in the Description</h1>
+            <p className='font-italic'>Grab your reader's attention by telling a story. By doing so, the donator will feel an emotional connection with your cause and a greater desire to help out. To do so...</p>
             <h3>Break it up</h3>
-            <bs.Row>
                 <ul>
                     <li>Have a clear introduction of who or what you are raising money for.</li>
                     <li>A clear explanation of your cause</li>
@@ -116,34 +125,23 @@ function Tips() {
                     <li>Make sure to write the importance of the cause to you</li>
                     <li>Express your appreciation for any potential donations</li>
                 </ul>
-            </bs.Row>
-            </bs.Row>
             <h3>Use underline, bold, italic headlines</h3>
-            <bs.Row>
                 <ul>
                     <li>Highlight the words with underline, bold, italic headline to drive your most important points home.</li>
                     <li>Use headlines like “The Costs”, “How You Can Help”, “The Backstory”, etc. You can use ‘control’ key + ‘b’ for bold letters, ‘control’ key + ‘u’ for underlined letters, and ‘control’ key + ‘i’ for italic letters.</li>
                 </ul>
-            </bs.Row>
-            <h3>Add photos or videos throughout your story</h3>
-            <bs.Row>
+            <h3>Add photos or videos</h3>
                 <ul>
                     <li>Use images or videos that are clear and bright to help you tell the story</li>
                     <li>You can add images or videos in ‘Edit,’ and place your cursor where you want
                         the image or video to appear. Then, press the "Photo/Video" button.</li>
                 </ul>
-            </bs.Row>
-            <h3>Proofread everything you write</h3>
-            <bs.Row>
+            <h3>Proofread what you write</h3>
                 <ul>
-                    <li>It is possible to make a typo here and there. However, having a typo-free post promotes legitimacy of the campaign hence it will help building credibility of the campaign</li>
+                    <li>It is possible to make a typo here and there. Having a typo-free post promotes legitimacy of the campaign hence it will help building credibility of the campaign</li>
                 </ul>
-            </bs.Row>
-            </bs.Row>
-            </bs.Col>
-            <bs.Col md="4" p="2">
-            <bs.Row>
-            <h1>What else can I do to make my campaign more successful?</h1>
+            <br/><br/>
+            <h1 className='text-center'>Other Tips for Success</h1>
             <ul>
                 <li>Post your campaign on Facebook and other social media accounts.</li>
                 <li>Share your post with friends and family on Facebook. (GoFundMe promotes campaigns
@@ -151,10 +149,8 @@ function Tips() {
                 <li>More personal the outreaches are, more likely the people you are asking would donate. Using email templates to make the most out of your outreach</li>
                 <li>Make sure to post frequent updates. Donators appreciate receiving updates from fundraiser. It is the best way to continue engaging the people who want to help you on GoFundMe.</li>
             </ul>
-            </bs.Row>
             </bs.Col>
-            </bs.Row>
-        </bs.Container>
+       </bs.Container>
     )
 }
 
