@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import AppContext from './context'
 import App from './App'
+import axiosInstance from "./axiosApi"
 import produce from 'immer'
 
 export default class AppProvider extends React.Component {
@@ -49,31 +50,26 @@ export default class AppProvider extends React.Component {
         }))
     }
 
-    LogIn = (name, pswd) => {
+    LogIn = (name) => {
         this.setState(state => produce(state, draft => {
-            if (name === 'admin' && pswd === 'admin123'){
-                draft.name = name
+            console.log(name)
+            if (name === 'dakota'){
+                draft.userName = name
                 draft.LoggedIn = true
                 draft.isAdmin = true
-                draft.isLogInError = false
-            }
-            else if (name === 'user' && pswd === 'user123'){
-                draft.name = name
-                draft.LoggedIn = true
-                draft.isAdmin = false
-                draft.isLogInError = false
             }
             else{
-                draft.isLogInError = true
+                draft.userName = name
+                draft.LoggedIn = true
+                draft.isAdmin = false
             }
         }))
     }
 
     LogOut() {
-        this.setState(state => produce(state, draft => {
-            draft.name = null
-            draft.LoggedIn = false
-        }))
+            this.userName = null
+            this.LoggedIn = false
+            this.isAdmin = false
     }
 
     render() {
@@ -86,6 +82,28 @@ export default class AppProvider extends React.Component {
 
     async componentDidMount() {
         const resp = await axios.get('http://localhost:8000/api/campaign')
+        try {
+            let response = await axiosInstance.get('/hello/')
+            // console.log('response from hello', response)
+            if (response == null){
+                // console.log('entered if')
+            } else if (response !== null){
+                // console.log('entered else if')
+                //############################ ADD ADMINS TO THIS IF STATEMENT ############################\\
+                if (response.data.user === 'dakota'){
+                    this.setState({...this.state, userName: response.data.user, LoggedIn:true, isAdmin:true})
+                } else{
+                    this.setState({...this.state, userName: response.data.user, LoggedIn:true})
+                }
+            } else {
+                // console.log('entered else')
+            }
+            return response
+        }catch(error){
+            // console.log("Error: ", 'Something is wrong')
+            throw(error)
+        }
+        // const resp = await axios.get('https://dakotasarcticapi.herokuapp.com/category')
         // const resp2 = await axios.get('https://dakotasarcticapi.herokuapp.com/product')
 
         this.setState({...this.state, campaign: resp.data})
