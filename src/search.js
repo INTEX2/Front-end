@@ -39,7 +39,12 @@ function Search(props){
                 </bs.InputGroup.Append>
             </bs.InputGroup>
         </bs.Row>
-            <bs.Row noGutters className="rounded-bottom rounded-top pt-2" style={{backgroundColor: 'white'}}>
+          <bs.Row noGutters className="rounded-bottom rounded-top pt-2" style={{backgroundColor: 'white'}}>
+                    <bs.Col className=' pl-4 font-weight-bold' md="4">Title</bs.Col>
+                    <bs.Col className='pl-4 font-weight-bold' md="2">Goal</bs.Col>
+                    <bs.Col className='pl-4 font-weight-bold' md="2">Amount Raised</bs.Col>
+                    <bs.Col  className='pl-4 font-weight-bold' md="2">Quality</bs.Col>
+                    <bs.Col className='pl-4 font-weight-bold' md="2">View Details</bs.Col>
               <ul>{newDict.map(state =>{
                       return (
                      //<li>{state.title} - {state.url}</li>
@@ -47,7 +52,6 @@ function Search(props){
                       )
                   })}
               </ul>
-            <Pages></Pages>
             </bs.Row>
         </bs.Container>
     )  
