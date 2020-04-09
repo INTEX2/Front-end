@@ -91,9 +91,9 @@ export default class AppProvider extends React.Component {
                 // console.log('entered else if')
                 //############################ ADD ADMINS TO THIS IF STATEMENT ############################\\
                 if (response.data.user === 'dakota'){
-                    this.setState({...this.state, userName: response.data.user, LoggedIn:true, isAdmin:true})
+                    this.setState({...this.state, userName: response.data.user, LoggedIn:true, isAdmin:true, campaign: resp.data})
                 } else{
-                    this.setState({...this.state, userName: response.data.user, LoggedIn:true})
+                    this.setState({...this.state, userName: response.data.user, LoggedIn:true, campaign: resp.data})
                 }
             } else {
                 // console.log('entered else')
@@ -105,7 +105,5 @@ export default class AppProvider extends React.Component {
         }
         // const resp = await axios.get('https://dakotasarcticapi.herokuapp.com/category')
         // const resp2 = await axios.get('https://dakotasarcticapi.herokuapp.com/product')
-
-        this.setState({...this.state, campaign: resp.data})
     }
 }
