@@ -109,7 +109,7 @@ const PaymentForm = props => (
                 <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
                 <p className='font-weight-normal font-italic m-4' >Use this model to predict the amount of donators that will support your campaign. The following inputs are required to create a GoFundMe campaign. By inputting as many as possible, your result will become more accurate.</p>
                 <br/>
-                <Input title="Will you automatically the campaign to Facebook?:"name="facebook" type="checkbox" disabled={props.form.isSubmitting} />
+                <Input title="Will you automatically post the campaign to Facebook?:"name="facebook" type="checkbox" disabled={props.form.isSubmitting} />
                         <Input title="Category ID:" name="catID" type="number" disabled={props.form.isSubmitting}/>
                         <Input title="Currency Code:" name="currency" type="text" disabled={props.form.isSubmitting}/>
                         <Input title="Donation Goal:" name="goal" type="number" disabled={props.form.isSubmitting}/>
