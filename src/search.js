@@ -14,14 +14,15 @@ import Pages from './pageNavigation'
 
 function Search(props){
     const context = React.useContext(AppContext)
-    let filteredCampaign = context.campaign.filter(
-        (campaign) => {
-          //Use includes looks cleaner and should be easier to remember.
-          //return contact.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-          return campaign.name.toLowerCase().includes(state.search.toLowerCase());
-        }
-      );
+   
+        // (campaign) => {
+        //   //Use includes looks cleaner and should be easier to remember.
+        //   //return contact.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+        //   return campaign.title.toLowerCase().includes(state.search.toLowerCase());
+        // }
+      // );
     let[state, setState] = useState(context.search)
+    let filteredCampaign = state
     console.log(state)
     // const item = context.campaign.find(p => p.id === parseInt(props.campaign));
     return (
@@ -33,7 +34,7 @@ function Search(props){
                 placeholder= {state}
                 aria-label="Campaign"
                 aria-describedby="basic-addon2"
-                onChange={(state)=> setState({search: context.updateSearch.bind(state)})
+                onChange={(state)=> setState({filteredCampaign: context.updateSearch.bind(state)})
                 }
                 />
                 <bs.InputGroup.Append>
