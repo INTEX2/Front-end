@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import * as bs from 'react-bootstrap'
 import Top from './top'
 import Left from './left'
@@ -9,11 +9,11 @@ import About from './About'
 import Help from './Help'
 import Covid from './covidData'
 import Search from './search'
+import SearchP from './searchPage'
 import Predictor from './predictor'
 import AllCampaigns from './allCampaigns'
 import CampaignDetails from './campaignDetails'
 import Tips from './tips'
-import SearchP from './searchPage'
 import LogIn from './login'
 import Calculaitons from './calculations'
 import Donations from './calculation-donation'
@@ -44,6 +44,7 @@ function App() {
                 <Route path="/about" component={About}/>
                 <Route path="/resources" component={Help}/>
                 <Route path="/search" component={Search}/>
+                <Route path="/searchPage" component={SearchP}/>
                 <Route path="/all-campaigns" component={AllCampaigns}/>
                 <Route path="/campaign-details/:id" component={CampaignDetails}/>
                 <Route path="/predictor" component={Predictor}/>

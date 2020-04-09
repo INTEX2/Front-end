@@ -14,6 +14,13 @@ import Pages from './pageNavigation'
 
 function Search(props){
     const context = React.useContext(AppContext)
+    let filteredCampaign = context.campaign.filter(
+        (campaign) => {
+          //Use includes looks cleaner and should be easier to remember.
+          //return contact.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+          return campaign.name.toLowerCase().includes(state.search.toLowerCase());
+        }
+      );
     let[state, setState] = useState(context.search)
     console.log(state)
     // const item = context.campaign.find(p => p.id === parseInt(props.campaign));
@@ -36,9 +43,9 @@ function Search(props){
             </bs.InputGroup>
         </bs.Row>
             <bs.Row noGutters className="rounded-bottom" style={{backgroundColor: 'white'}}>
-            {Object.values(context.campaign).map(n =>{
+            {Object.values(context.campaign).map(state =>{
                       return (
-                      <li>{n.title}</li>
+                     <li>{state.title} - {state.url}</li>
                     //   <CampaignRow key={n.id} campaign={n.id}/>
                       )
                   })}

@@ -13,7 +13,8 @@ export default class AppProvider extends React.Component {
             getUserName: this.getUserName,
             setUserName: this.setUserName,
             updateSearch: this.updateSearch,
-            filteredSearch: this.filteredSearch
+            filteredSearch: this.filteredSearch,
+            searchterm: this.searchTerm
 
         }
         this.cancel = '';
@@ -23,7 +24,8 @@ export default class AppProvider extends React.Component {
             isLogInError: false,
             isAdmin: false,
             campaign: {},
-            search: ''
+            search: '',
+           
         }
     } 
     
