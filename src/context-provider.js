@@ -13,31 +13,32 @@ export default class AppProvider extends React.Component {
             getUserName: this.getUserName,
             setUserName: this.setUserName,
             updateSearch: this.updateSearch,
+            filteredSearch: this.filteredSearch,
+            searchterm: this.searchTerm
 
         }
+        this.cancel = '';
         this.state = {
             LoggedIn: false,
             userName: null,
             isLogInError: false,
             isAdmin: false,
             campaign: {},
-            search: 'search',
+            search: '',
+           
         }
     } 
-
-    updateSearch(event){
-        this.setState({search: event.target.value.substr(0, 20)});
-    }
-
-    render(){
-        let filteredSearch = this.props.campaign.filter(
-            (campaign)=> {
-                return campaign.title.toLowerCase().indexOf(
-                    this.state.search) !== -1;
-            }
-        )
-    }
     
+    filteredSearch = (campaign) => {
+        return campaign.title.toLowerCase().includes(this.state.search.toLowerCase());
+        }
+    
+
+    updateSearch(state){
+        this.setState({search: state.target.value.substr(0,20)})
+    }
+
+   
     getUserName() {
         return(this.userName)
     }
@@ -84,9 +85,9 @@ export default class AppProvider extends React.Component {
     }
 
     async componentDidMount() {
-        // const resp = await axios.get('https://dakotasarcticapi.herokuapp.com/category')
+        const resp = await axios.get('http://localhost:8000/api/campaign')
         // const resp2 = await axios.get('https://dakotasarcticapi.herokuapp.com/product')
 
-        // this.setState({...this.state, categories: resp.data, products: resp2.data})
+        this.setState({...this.state, campaign: resp.data})
     }
 }

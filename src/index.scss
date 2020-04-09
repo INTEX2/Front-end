@@ -5,6 +5,7 @@ $info: #004876;
 $warning: #8C5C03;
 $danger: #9E2821;
 $light: #f8f9fa;
+$black: black;
 
 $top-bg : #00A878;
 $left-bg : #FFD166;
@@ -13,9 +14,8 @@ $right-bg : #FFD166;
 $bottom-bg : #CFDBD5;
 
 code {
-    text-align: center;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+    
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 .top-bg{
@@ -31,7 +31,7 @@ code {
 .middle-bg{
   background-color: $center-bg ;
   box-shadow: 10px 10px;
-  text-align: center;
+  
 }
 
 .right-bg{
@@ -43,5 +43,11 @@ code {
   background-color: $bottom-bg ;
 }
 
+h1{
+  text-shadow: 2px 2px $secondary;
+}
 
+h3{
+  text-decoration: underline solid black;
+}
 @import "~bootstrap/scss/bootstrap";
