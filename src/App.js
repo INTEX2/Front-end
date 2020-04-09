@@ -12,7 +12,11 @@ import Search from './search'
 import Predictor from './predictor'
 import SearchDetails from './searchDetails'
 import Tips from './tips'
-import LogIn from './login'
+// import LogIn from './login'
+import Login from './components/login'
+import Signup from './components/signup'
+import Logout from './components/logout'
+import Hello from './components/hello'
 import Calculaitons from './calculations'
 import Donations from './calculation-donation'
 import './App.scss'
@@ -20,7 +24,6 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 
 function App() {
-
   return (
       <Router>
         <bs.Container fluid="true" className='p-0 min-vh-100 d-flex flex-column' style={{backgroundColor: "gray"}}>
@@ -41,7 +44,11 @@ function App() {
                 <Route path="/searchDetails" component={SearchDetails}/>
                 <Route path="/predictor" component={Predictor}/>
                 <Route path="/covid-data" component={Covid}/>
-                <Route path="/login" component={LogIn}/>
+                {/* <Route path="/login" component={LogIn}/> */}
+                <Route path="/login" component={Login}/>
+                <Route path="/signup" component={Signup}/>
+                <Route path="/logout" component={Logout}/>
+                <Route path="/hello" component={Hello}/>
                 <Route path="/tips" component={Tips}/>
                 <Route path="/calculations" component={Calculaitons}/>
                 <Route path="/donation-calculation" component={Donations}/>
