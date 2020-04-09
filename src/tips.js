@@ -15,12 +15,12 @@ function Tips() {
             <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
             <br/>
             <h1 className='text-center'>Predict Campaign Success</h1>
-            <p>Want to see how your campaign compares with others? Predict your campaign's number of donators or average donation amount.</p>
+            <p className='font-italic'>Want to see how your campaign compares with others? Predict your campaign's number of donators or average donation amount.</p>
             <center><Link to='/calculations/'><bs.Button type="submit" className='w-40 success'  md='6'>Predict Donators</bs.Button></Link><span>        </span>
             <Link to='/donation-calculation/'><bs.Button type="submit" className='w-40 success'  md='6'>Predict Average Donation</bs.Button></Link></center><br/>
             <br/><br/>
             <h1 className='text-center'>Use the Right Words</h1>
-                <p>
+                <p className='font-italic'>
                     Help your campaign stand out from the noise with powerful text analytics.
                     Our research using thousands of GoFundMe campaigns has helped us discover key words and word combinations that lead to successful campaigns. By clicking your language of choice below, you will see what words you should include in your coronavirus campaign.
                 </p>

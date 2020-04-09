@@ -40,6 +40,12 @@ function Middle() {
             <br/>
             <br/>
             <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             </bs.Carousel.Item>
             <bs.Carousel.Item style={{backgroundColor: "white"}}>
               <center>
@@ -50,6 +56,12 @@ function Middle() {
               />
               <br/>
               <center><Link to='/all-campaigns/'><bs.Button type="submit" className='w-50 success' block md='12'>View Campaigns</bs.Button></Link></center><br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
               <br/>
               <br/>
               <br/>
@@ -75,6 +87,12 @@ function Middle() {
               />
               <br/>
               <center><Link to='/calculations/'><bs.Button type="submit" className='w-50 success' block md='12'>Predict Number of Donators</bs.Button></Link></center><br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
               <br/>
               <br/>
               <br/>

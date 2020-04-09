@@ -103,7 +103,7 @@ const PaymentForm = props => (
                 </bs.Col>
             <bs.Row>
                 <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
-                    <bs.Button id="submitButton"  disabled={props.form.isSubmitting} type="submit" variant="warning">
+                    <bs.Button id="submitButton"  disabled={props.form.isSubmitting} type="submit" variant="success">
                         <span hidden={!props.form.isSubmitting}>
                         </span>
                         <span hidden={props.form.isSubmitting}>
