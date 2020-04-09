@@ -23,6 +23,7 @@ class Logout extends Component {
             localStorage.removeItem('refresh_token')
             this.context.LogOut()
             // console.log('contextType',this.context)
+            // window.location.reload(false)
             return response
         }
         catch (e) {
@@ -38,6 +39,7 @@ class Logout extends Component {
         return (
             <div className='jumbotron' style={{fontWeight:'bold'}}>
                 <h4>Your Logout was successful, hope to see you again soon</h4>
+                <p>Refresh to log in again</p>
                 <p>Click <u><Link to="/">here</Link></u> to go back to the homepage</p>
             </div>
         )

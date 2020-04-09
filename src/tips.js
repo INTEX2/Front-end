@@ -1,10 +1,27 @@
-// import React, {useContext} from 'react'
-import React from 'react'
+import React, {useContext} from 'react'
+// import React from 'react'
 import * as bs from 'react-bootstrap'
 import { useRouteMatch, Link } from 'react-router-dom'
-// import AppContext from './context'
+import AppContext from './context'
 
 function Tips() {
+    let context = useContext(AppContext) 
+    if (!context.LoggedIn){
+        return(
+            <bs.Container className='text-left' >
+              <bs.Row>
+                  <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
+                      <h2>Tips for Campaign Creators</h2>
+                  </bs.Col>
+              </bs.Row>
+              <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
+                  <h5>
+                      If the page doesn't load after a couple of seconds you might need to log in... click <Link to="/login" className="">here</Link> to sign in!
+                  </h5>
+              </bs.Col> 
+          </bs.Container>
+        )
+    }
     return (
         <bs.Container  style={{fontFamily: "helvetica"}}>
            <bs.Row>
@@ -110,7 +127,7 @@ function Tips() {
                 </bs.Accordion>
                 <br></br>
                 <p>
-                    <center><Link to="./allCampaigns" className="btn btn-primary w-50"  block md='12'>View all campaigns</Link></center>
+                    <center><Link to="./all-campaigns" className="btn btn-primary w-50"  block md='12'>View all campaigns</Link></center>
                 </p>
 
             

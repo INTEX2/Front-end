@@ -40,7 +40,7 @@ class Signup extends Component{
 
     render() {
         return (
-            <div className="jumbotron m-5">
+            <div className="jumbotron m-5 text-center">
                 <h2 className="mb-5">Become a Member</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>

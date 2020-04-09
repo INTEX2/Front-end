@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import * as bs from 'react-bootstrap'
 import { Formik, Form, Field} from 'formik'
+import { Link } from 'react-router-dom'
 import AppContext from './context'  
 
 
@@ -14,6 +15,22 @@ export default Checkout
 
 const CheckoutController = props => {
     const state = useContext(AppContext)
+    if (!state.LoggedIn){
+        return(
+            <bs.Container className='text-left' >
+              <bs.Row>
+                  <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
+                      <h2>Amount of Donators Predictor</h2>
+                  </bs.Col>
+              </bs.Row>
+              <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
+                  <h5>
+                      If the page doesn't load after a couple of seconds you might need to log in... click <Link to="/login" className="">here</Link> to sign in!
+                  </h5>
+              </bs.Col> 
+          </bs.Container>
+        )
+    }
     const axios = require('axios')
     let Prediction = 0   
     return (

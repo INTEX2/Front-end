@@ -63,7 +63,7 @@ class Login extends Component {
 
     render() {        
         return (
-            <div className="jumbotron m-5">
+            <div className="jumbotron m-5 text-center">
                 {this.renderRedirect()}
                 <h6 style={{color:'red'}}>{this.state.message}</h6>
                 <h2 className="mb-5">Sign In</h2>

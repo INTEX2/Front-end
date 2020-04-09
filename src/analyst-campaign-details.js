@@ -7,6 +7,22 @@ import AppContext from './context';
 function CampaignDetails(props){
     let context = useContext(AppContext)
     let {id} = useParams()
+    if (!context.isAdmin){
+        return(
+            <bs.Container className='text-left' >
+              <bs.Row>
+                  <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
+                      <h2>Analyst details page</h2>
+                  </bs.Col>
+              </bs.Row>
+              <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
+                  <h5>
+                      If the page doesn't load after a couple of seconds you might not be logged in or have the right to view it... click <Link to="/login" className="">here</Link> to sign in!
+                  </h5>
+              </bs.Col> 
+          </bs.Container>
+        )
+    }
     const item = context.campaign.find(prod => {
         return(prod.id.toString() === id)})
 

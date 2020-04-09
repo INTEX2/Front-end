@@ -87,6 +87,7 @@ export default class AppProvider extends React.Component {
             // console.log('response from hello', response)
             if (response == null){
                 // console.log('entered if')
+                this.setState({...this.state, campaign: resp.data})
             } else if (response !== null){
                 // console.log('entered else if')
                 //############################ ADD ADMINS TO THIS IF STATEMENT ############################\\
