@@ -1,49 +1,52 @@
-import React from 'react'
+import React, {useState} from 'react'
 import * as bs from 'react-bootstrap'
 import AppContext from './context'
 import {Link, } from 'react-router-dom'
 import CampaignRow from "./campaign-row"
+import Pages from './pageNavigation'
+
+// render(){
+//     let fileteredCampaign = context.campaign.filter(
+//         (campaign)=>{
+//             return campaign.name.indexOf(context.state.search) !== -1;
+//         })
+//    }
 
 function Search(props){
     const context = React.useContext(AppContext)
-    let fileteredCampaign = context.state.campaign.filter(
-        (campaign)=> {
-            return campaign.title.indexOf(context.state.search) !== -1;
-        })
-   // const item = context.campaign.find(p => p.id === parseInt(props.campaign));
+    let[state, setState] = useState(context.search)
+    console.log(state)
+    // const item = context.campaign.find(p => p.id === parseInt(props.campaign));
     return (
         <bs.Container fluid className="p-4">
-            <bs.Row noGutters className="rounded-top" style={{backgroundColor: 'white'}}>
-                <bs.Col>
-                    <h1>Search</h1>
-                </bs.Col>
-            </bs.Row>
+        <bs.Row className="p-0">
+        <h1 className="text-center">Find Campaign </h1>
+        <bs.InputGroup className="mb-3">
+                <bs.FormControl
+                placeholder= {state}
+                aria-label="Campaign"
+                aria-describedby="basic-addon2"
+                onChange={(state)=> setState({search: context.updateSearch.bind(state)})
+                }
+                />
+                <bs.InputGroup.Append>
+                <bs.Button variant="success" className="fa fa-search search-icon"></bs.Button>
+                {/* <Link to={"/searchDetails/"}className="btn btn-light">Search</Link> */}
+                </bs.InputGroup.Append>
+            </bs.InputGroup>
+        </bs.Row>
             <bs.Row noGutters className="rounded-bottom" style={{backgroundColor: 'white'}}>
-                <bs.Col>                
-                <input className="mb-3" value="search"
-                    onChange={context.updateSearch.bind(context)}>
-                    <bs.FormControl
-                    placeholder="Enter Campaign"
-                    aria-label="Campaign"
-                    aria-describedby="basic-addon2"
-                    />
-                    <bs.InputGroup.Append>
-                    <Link to={"/searchDetails/"}className="btn btn-light">Campaign Details</Link>
-                    </bs.InputGroup.Append>
-                </input>
-                <div>
-                    <ul>
-                    {fileteredCampaign.map((campaign)=>{
-                        return <CampaignRow campaign={campaign}
-                        key={campaign.campaign_id}
-                        ></CampaignRow>
-                    })}
-                    </ul>
-                </div>
-                
-                </bs.Col>
+            {Object.values(context.campaign).map(n =>{
+                      return (
+                      <li>{n.title}</li>
+                    //   <CampaignRow key={n.id} campaign={n.id}/>
+                      )
+                  })}
+            <Pages></Pages>
             </bs.Row>
+            
         </bs.Container>
+
     )  
 }
 

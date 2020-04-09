@@ -13,6 +13,7 @@ export default class AppProvider extends React.Component {
             getUserName: this.getUserName,
             setUserName: this.setUserName,
             updateSearch: this.updateSearch,
+            filteredSearch: this.filteredSearch
 
         }
         this.cancel = '';
@@ -26,8 +27,13 @@ export default class AppProvider extends React.Component {
         }
     } 
     
-    updateSearch(event){
-        this.setState({search: event.target.value.substr(0,20)})
+    filteredSearch = (campaign) => {
+        return campaign.title.toLowerCase().includes(this.state.search.toLowerCase());
+        }
+    
+
+    updateSearch(state){
+        this.setState({search: state.target.value.substr(0,20)})
     }
 
    
