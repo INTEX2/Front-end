@@ -35,7 +35,7 @@ function Analysts() {
                 <p>An in-depth analysis of GoFundMe campaigns was performed to evaluate campaign quality of campaigns related to the coronavirus or similar campaigns. 
                     After exploring the data, we decided to rate the quality of a campaign based on the average donation amount it received. The campaigns were given a quality rating of Low, Mid-Low, Mid-High, or High. Summaries of these groups of campaigns can be found below.</p><br/>
                 <center><Link to='/quality'><bs.Button type="submit" className='w-50 success' block md='12'>
-                    VIEW THE RATED DATASET
+                    View Rated Campaigns
                 </bs.Button></Link></center><br/>
                 <br/><h2>Rating Averages</h2><br/>
                 <bs.Row>
