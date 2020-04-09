@@ -11,10 +11,10 @@ export default function CampaigRow(props) {
     return(
         <Row className='mb-3'>
             <Col md="4">{item.title}</Col>
-            <Col md="2">{item.goal}</Col>
-            <Col md="2">{item.current_amount}</Col>
+            <Col md="2">${item.goal}</Col>
+            <Col md="2">${item.current_amount}</Col>
             <Col md="2">{item.donators}</Col>
-            <Col md="2"><Link to={"/campaignDetails/" +item.id} className="btn btn-secondary">Details</Link></Col>
+            <Col md="2"><Link to={"/campaign-details/" +item.id} className="btn btn-secondary">Details</Link></Col>
         </Row>
     )
 }

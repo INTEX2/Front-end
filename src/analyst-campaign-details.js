@@ -20,9 +20,10 @@ function CampaignDetails(props){
                 <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
                     <bs.Row>
                         <bs.Col md='6'>
-                            <p><span className='font-weight-bold'>Goal:</span> ${item.goal}</p>
+                            <p><span className='font-weight-bold'>Quality:</span> {item.quality}</p>
                         </bs.Col>
                         <bs.Col md='6'>
+                            <p><span className='font-weight-bold'>Goal:</span> ${item.goal}</p>
                             <p><span className='font-weight-bold'>Current Amount:</span> ${item.current_amount}</p>
                         </bs.Col>
                     </bs.Row>

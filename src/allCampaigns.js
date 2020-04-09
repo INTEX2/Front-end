@@ -13,7 +13,7 @@ function AllCampaigns() {
           <bs.Container className='text-left' >
               <bs.Row>
                   <bs.Col className="px-3 py-4" style={{color:"white",backgroundColor: "royalBlue"}}>
-                      <h2>GoFundMe Management &amp; Analyst Campaign Ratings</h2>
+                      <h2>All Campaigns</h2>
                   </bs.Col>
               </bs.Row>
               <bs.Col md="12" className="px-3 py-4 border-right" style={{backgroundColor: "white"}}>
