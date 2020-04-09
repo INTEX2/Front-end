@@ -80,7 +80,7 @@ export default class AppProvider extends React.Component {
     }
 
     async componentDidMount() {
-        const resp = await axios.get('http://localhost:8000/api/campaign')
+        const resp = await axios.get('/api/campaign')
         try {
             let response = await axiosInstance.get('/hello/')
             // console.log('response from hello', response)
