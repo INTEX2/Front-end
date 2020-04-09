@@ -4,7 +4,7 @@ import {Col} from 'react-bootstrap'
 import AppContext from './context'
 import {Link, } from 'react-router-dom'
 
-export default function CampaignRow(props) {
+export default function CampaigRow(props) {
     let context = useContext(AppContext)
     const item = context.campaign.find(p => p.id === parseInt(props.campaign));
 
@@ -13,8 +13,8 @@ export default function CampaignRow(props) {
             <Col md="4">{item.title}</Col>
             <Col md="2">${item.goal}</Col>
             <Col md="2">${item.current_amount}</Col>
-            <Col md="2">{item.quality}</Col>
-            <Col md="2"><Link to={"/analyst-details/" +item.id} className="btn btn-secondary">Details</Link></Col>
+            <Col md="2">{item.donators}</Col>
+            <Col md="2"><Link to={"/campaign-details/" +item.id} className="btn btn-secondary">Details</Link></Col>
         </Row>
     )
 }

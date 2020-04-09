@@ -19,6 +19,8 @@ import Calculaitons from './calculations'
 import Donations from './calculation-donation'
 import Analysts from './analysts'
 import Quality from './quality'
+import AnalystDetails from './analyst-campaign-details'
+import Testimonials from './testimonials'
 import './App.scss'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
@@ -42,9 +44,8 @@ function App() {
                 <Route path="/about" component={About}/>
                 <Route path="/resources" component={Help}/>
                 <Route path="/search" component={Search}/>
-                <Route path="/searchPage" component={SearchP}/>
-                <Route path="/allCampaigns" component={AllCampaigns}/>
-                <Route path="/campaignDetails/:id" component={CampaignDetails}/>
+                <Route path="/all-campaigns" component={AllCampaigns}/>
+                <Route path="/campaign-details/:id" component={CampaignDetails}/>
                 <Route path="/predictor" component={Predictor}/>
                 <Route path="/covid-data" component={Covid}/>
                 <Route path="/login" component={LogIn}/>
@@ -52,8 +53,9 @@ function App() {
                 <Route path="/calculations" component={Calculaitons}/>
                 <Route path="/donation-calculation" component={Donations}/>
                 <Route path="/gofundme-analysts" component={Analysts}/>
-                <Route path="/testimonials" component={Donations}/>
+                <Route path="/testimonials" component={Testimonials}/>
                 <Route path="/quality" component={Quality}/>
+                <Route path="/analyst-details/:id" component={AnalystDetails}/>
                 <Route path="/" component={Middle}/>
               </Switch> 
             </bs.Col>
