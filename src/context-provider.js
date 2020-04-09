@@ -16,7 +16,6 @@ export default class AppProvider extends React.Component {
             updateSearch: this.updateSearch,
             filteredSearch: this.filteredSearch,
             searchterm: this.searchTerm
-
         }
         this.cancel = '';
         this.state = {
@@ -30,10 +29,10 @@ export default class AppProvider extends React.Component {
         }
     } 
     
-    filteredSearch = (campaign) => {
-        return campaign.title.toLowerCase().includes(this.state.search.toLowerCase());
-        }
-    
+    filteredSearch(search) { 
+        this.campaign.forEach((campaign) =>{
+        return this.campaign.title.toLowerCase().includes(this.state.search.toLowerCase());
+        })}
 
     updateSearch(state){
         this.setState({search: state.target.value.substr(0,20)})
