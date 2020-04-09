@@ -14,7 +14,7 @@ export default function CampaignRow(props) {
             <Col md="2">${item.goal}</Col>
             <Col md="2">${item.current_amount}</Col>
             <Col md="2">{item.quality}</Col>
-            <Col md="2"><Link to={"/analyst-details/" +item.id} className="btn btn-secondary">Details</Link></Col>
+            <Col md="2"><Link to={"/analyst-details/" +item.id} className="btn btn-success">Details</Link></Col>
         </Row>
     )
 }
